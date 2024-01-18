@@ -106,7 +106,7 @@ header {
                 height : 100%;
                 list-style: none;
                 li {
-                    padding: 0 20px;
+                    padding: 0 10px;
                     align-self: center;
   
                     a {
@@ -114,7 +114,7 @@ header {
                         text-transform: uppercase;
                         text-decoration: none;
                         color: #1C1C1C;
-                        padding : 20px 0px;
+                        padding : 45px 0px;
                         border-bottom: 5px solid transparent;
 
                         &:hover {
