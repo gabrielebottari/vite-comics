@@ -5,43 +5,33 @@ export default {
             
             headerMenu : [
                 {
-                href: "#",
                 text: "characters",
                 },
                 {
-                href: "#",
                 text: "comics",
                 },
                 {
-                href: "#",
                 text: "movies",
                 },
                 {
-                href: "#",
                 text: "tv",
                 },
                 {
-                href: "#",
                 text: "games",
                 },
                 {
-                href: "#",
                 text: "collectibles",
                 },
                 {
-                href: "#",
                 text: "videos",
                 },
                 {
-                href: "#",
                 text: "fans",
                 },
                 {
-                href: "#",
                 text: "news",
                 },
                 {
-                href: "#",
                 text: "shop",
                 }
             ],
@@ -66,7 +56,7 @@ export default {
         <nav>
             <ul>
                 <li v-for="item in headerMenu" :key="item.text">
-                    <a :href="item.href">{{ item.text }}</a>
+                    <a>{{ item.text }}</a>
                 </li>
             </ul>
         </nav>

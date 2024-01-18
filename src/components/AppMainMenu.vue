@@ -4,32 +4,26 @@ export default {
         return {
             mainMenu : [
                 {
-                    href: "#",
                     icon: "buy-comics-digital-comics.png",
                     text: "digital comics",
                 },
                 {
-                    href: "#",
                     icon: "buy-comics-merchandise.png",
                     text: "dc merchandise",
                 },
                 {
-                    href: "#",
                     icon: "buy-comics-subscriptions.png",
                     text: "subscription",
                 },
                 {
-                    href: "#",
                     icon: "buy-comics-shop-locator.png",
                     text: "comic shop locator",
                 },
                 {
-                    href: "#",
                     icon: "buy-dc-power-visa.svg",
                     text: "dc power visa",
                 }
-                ],
-
+            ],
 
         };
     },
@@ -52,7 +46,7 @@ export default {
                         <div class="icon">
                             <img :src="getImage(menu.icon)"/>
                         </div>
-                        <a :href="menu.href">{{ menu.text }}</a>
+                        <a>{{ menu.text }}</a>
                     </li>
                 </ul>
             </nav>         
@@ -88,11 +82,8 @@ main {
             max-height: 100%;
           }
         }
-
-        &:last-child {
-          .icon {
+        .icon {
             width : 60px;
-          }
         }
 
         a {

@@ -24,7 +24,7 @@ export default {
 main {
     background-color: black;
     .container{
-        height: 300px;
+        height: 315px;
         color: white;
         font-size: 3em;
         text-align: center;
