@@ -1,6 +1,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
+import AppMainMenu from './components/AppMainMenu.vue';
 import AppFooter from './components/AppFooter.vue';
 
 export default {
@@ -12,7 +13,8 @@ export default {
     components: {
         AppHeader,
         AppMain,
-        AppFooter
+        AppMainMenu,
+        AppFooter,
     },  
     methods: {
 
@@ -25,6 +27,8 @@ export default {
     <AppHeader />
 
     <AppMain />
+
+    <AppMainMenu />
 
     <AppFooter />
 </template>
