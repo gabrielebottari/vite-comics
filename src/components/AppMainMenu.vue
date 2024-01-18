@@ -48,11 +48,11 @@ export default {
        <div class="container">
             <nav>
                 <ul>
-                    <li v-for="(link, index) in mainMenu" :key="index">
+                    <li v-for="(menu, index) in mainMenu" :key="index">
                         <div class="icon">
-                            <img :src="getImage(link.icon)"/>
+                            <img :src="getImage(menu.icon)"/>
                         </div>
-                        <a :href="link.href">{{ link.text }}</a>
+                        <a :href="menu.href">{{ menu.text }}</a>
                     </li>
                 </ul>
             </nav>         
