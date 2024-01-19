@@ -90,9 +90,7 @@ export default {
     components: {
         SingleCard
     },
-
     methods: {
-
     }
 }
 </script>
@@ -103,19 +101,24 @@ export default {
             <img src="../../public/img/jumbotron.jpg" alt="jumbotron">
         </div>
        
+        <div class="container">
 
-       <div class="container">
+            <h1>Current Series</h1>
 
-        <div class="cards-container">
-            <SingleCard
-                v-for="(comic, index) in comics"
-                :key = "index"
-                :thumb = "comic.thumb"
-                :series = "comic.series"
-            />  
+            <div class="cards-container">
+                <SingleCard
+                    v-for="(comic, index) in comics"
+                    :key = "index"
+                    :thumb = "comic.thumb"
+                    :series = "comic.series"
+                />  
+            </div>
+
+            <div class="button-container">
+                <button>Load More</button>
+            </div>
+
         </div>
-
-       </div>
 
     </main>
 </template>
@@ -123,6 +126,7 @@ export default {
 <style lang="scss">
 
 @use "../assets/scss/partials/variables.scss" as *;
+@use "../assets/scss/partials/mixins.scss" as *;
 
 main {
     background-color: #1c1c1c;
@@ -144,23 +148,36 @@ main {
 
       h1 {
         position: absolute;
-        top: -30px;
-        left: 0;
+        top: -25px;
+        left: 10px;
         display: inline-block;
-        text-transform: uppercase;
-        color : white;
         background-color : $primary-color;
-        padding: 10px 30px;
+        color : white;
+        padding: 10px 25px;
+        font-size: 1.5em;
+        @include uppercase;
       }
 
       .cards-container {
-        display: flex;
+        @include flex;
         flex-wrap: wrap;
       }
 
     }
 
+    .button-container {
+        @include flex;
+        justify-content: center;
+        padding-bottom: 20px;
+
+        button {
+          color: white;
+          background-color: $primary-color;
+          border: none;
+          padding: 10px 50px;
+          @include uppercase;
+        }
+      }
+
   }
-
-
 </style>

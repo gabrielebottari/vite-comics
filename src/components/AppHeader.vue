@@ -70,10 +70,11 @@ export default {
 <style lang="scss" scoped>
 
 @use "../assets/scss/partials/variables.scss" as *;
+@use "../assets/scss/partials/mixins.scss" as *;
 
 header {
     .container {
-        display: flex;
+        @include flex;
         justify-content: space-between;
         height: 120px;
       
@@ -92,7 +93,7 @@ header {
             vertical-align: middle;
 
             ul {
-                display: flex;
+                @include flex;
                 height : 100%;
                 list-style: none;
                 li {
@@ -101,11 +102,11 @@ header {
   
                     a {
                         height : 100%;
-                        text-transform: uppercase;
                         text-decoration: none;
                         color: #1C1C1C;
                         padding : 45px 0px;
                         border-bottom: 5px solid transparent;
+                        @include uppercase;
 
                         &:hover {
                         color : $primary-color;

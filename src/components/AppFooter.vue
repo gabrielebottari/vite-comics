@@ -169,6 +169,7 @@ export default {
 <style lang="scss" scoped>
 
 @use "../assets/scss/partials/variables.scss" as *;
+@use "../assets/scss/partials/mixins.scss" as *;
 .footer-top {
     background-image: url("../public/img/footer-bg.jpg");
     background-size: cover;
@@ -178,15 +179,15 @@ export default {
 
     .container {
       padding: 20px 0;
-      display: flex;
+      @include flex;
 
       .menu {
         padding-right: 20px;
 
         h3 {
           color: white;
-          text-transform: uppercase;
           margin-bottom: 10px;
+          @include uppercase;
         }
   
         ul {
@@ -215,23 +216,23 @@ export default {
   }
   .bottom {
     padding: 30px 0;
-    background-color: #303030;
+    background-color: $secondary-color;
 
     .container {
-        display: flex;
+        @include flex;
         align-content: center;
         justify-content: space-between;
-        text-transform: uppercase;
+        @include uppercase;
 
         button {
             border: 2px solid $primary-color;
             color: white;
             padding: 15px 20px;
             background-color: transparent;
-            text-transform: uppercase;
+            @include uppercase;
         }
         .social {
-            display: flex;
+            @include flex;
             align-content: center;
 
             h3 {
@@ -241,7 +242,7 @@ export default {
             }
 
             ul {
-                display: flex;
+                @include flex;
                 align-self: center;
                 list-style: none;
                 li {

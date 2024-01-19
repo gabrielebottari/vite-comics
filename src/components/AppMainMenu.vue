@@ -59,6 +59,7 @@ export default {
 <style lang="scss" scoped>
 
 @use "../assets/scss/partials/variables" as *;
+@use "../assets/scss/partials/mixins.scss" as *;
 
 main {
     background-color: $primary-color;
@@ -66,14 +67,14 @@ main {
     padding : 60px 0;
     
     ul {
-      display: flex;
+      @include flex;
       justify-content: space-around;
 
       li {
         display: flex;
         
         .icon {
-          display: flex;
+          @include flex;
           align-items: center;
           justify-content: center;
           height: 50px;
@@ -87,14 +88,13 @@ main {
         }
 
         a {
-          text-transform: uppercase;
           color: white;
           padding-left : 15px;
           text-decoration: none;
           line-height: 50px;
-
+          @include uppercase;
           &:hover {
-            text-decoration: underline;
+                text-decoration: underline;
           }
         }
       }

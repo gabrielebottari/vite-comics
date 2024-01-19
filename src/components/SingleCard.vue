@@ -21,6 +21,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+@use "../assets/scss/partials/variables" as *;
+@use "../assets/scss/partials/mixins.scss" as *;
 .card {
     width: calc(100% / 6);
     padding: 0 10px;
@@ -43,8 +46,8 @@ export default {
     }
 
     h5 {
-      text-transform: uppercase;
-      margin-bottom: 50px;
+        @include uppercase;
+        margin-bottom: 50px;
     }
 }
 </style>
